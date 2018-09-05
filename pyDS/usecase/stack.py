@@ -31,3 +31,38 @@ def bracketBalanced(expression):
         return True
     else:
         return False
+
+
+def decimalBaseConvert(number, base=2):
+    """Convert decimal numbers.
+
+    Convert the base of a decimal number to another base.
+
+    Args:
+        number (int): The number to be converted.
+        base (int, optional): The base to convert the number to.
+            Defaults to 2. Minimum value 2. Maximum value 16.
+
+    Returns:
+        str: The string representation of the converted number.
+
+    """
+    if base < 2 or base > 16:
+        raise ValueError("Invalid Base Value: Expected value between 2 and 16")
+
+    if number == 0:
+        return '0'
+
+    stack = Stack()
+
+    digits = "0123456879ABCDEF"
+
+    while number > 0:
+        stack.push(number % base)
+        number = number // base
+
+    converted_number = ""
+    while not stack.isEmpty():
+        converted_number += digits[stack.pop()]
+
+    return converted_number
