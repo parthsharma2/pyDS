@@ -23,8 +23,14 @@ class Stack:
 
     def pop(self):
         """Remove an item from the Stack."""
-        return self._items.pop()
+        if len(self._items) == 0:
+            raise ValueError("Stack Underflow")
+        else:
+            return self._items.pop()
 
     def peek(self):
         """Return the top item from the Stack."""
-        return self._items[len(self._items) - 1]
+        if len(self._items) == 0:
+            raise ValueError("Stack Underflow")
+        else:
+            return self._items[len(self._items) - 1]
