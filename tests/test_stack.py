@@ -38,6 +38,7 @@ class TestStack(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.stack.peek()
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_stack_str_representation(self):
+        self.stack.push(2)
+        self.stack.push(4)
+        self.assertEqual(str(self.stack),"2 4")

@@ -11,7 +11,7 @@ class Stack:
 
     def __str__(self):
         """Return the string representation of the Stack."""
-        return ' '.join(self._items)
+        return ' '.join([str(x) for x in self._items])
 
     def isEmpty(self):
         """Return whether the stack is empty."""
