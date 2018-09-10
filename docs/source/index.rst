@@ -11,12 +11,7 @@ Welcome to pyDS's documentation!
    :caption: Contents:
 
    intro
-<<<<<<< HEAD
    modules
-=======
-   tutorial
-   usecase
->>>>>>> d90d1a4b2eb52ec23abe6cb959ef2b66ae26a09c
 
 Indices and tables
 ==================
