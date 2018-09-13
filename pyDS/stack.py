@@ -13,6 +13,9 @@ class Stack:
         """Return the string representation of the Stack."""
         return ' '.join([str(x) for x in self._items])
 
+    def __repr__(self):
+        return "pyDS.stack.Stack " + str(self._items)
+
     def isEmpty(self):
         """Return whether the stack is empty."""
         return self._items == []
