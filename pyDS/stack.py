@@ -16,7 +16,7 @@ class Stack:
     def __repr__(self):
         return "pyDS.stack.Stack({})".format(self._items)
 
-    def isEmpty(self):
+    def is_empty(self):
         """Return whether the stack is empty."""
         return self._items == []
 
