@@ -11,6 +11,22 @@ Subpackages
 Submodules
 ----------
 
+pyDS.linked\_list module
+------------------------
+
+.. automodule:: pyDS.linked_list
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyDS.queue module
+-----------------
+
+.. automodule:: pyDS.queue
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pyDS.stack module
 -----------------
 
