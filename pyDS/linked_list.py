@@ -44,6 +44,10 @@ class LinkedList():
             yield ptr.data
             ptr = ptr.next
 
+    def __reversed__(self):
+        """Reverse the Linked List."""
+        self.reverse()
+
     def push(self, item):
         """Add item to the front of the Linked List.
 
@@ -95,3 +99,14 @@ class LinkedList():
             raise ValueError('Item {} not in Linked List'.format(item))
         else:
             prev.next = temp.next
+
+    def reverse(self):
+        """Reverse the items of the Linked List."""
+        current_ptr = self.head
+        prev_ptr = None
+        while current_ptr:
+            next_ptr = current_ptr.next
+            current_ptr.next = prev_ptr
+            prev_ptr = current_ptr
+            current_ptr = next_ptr
+        self.head = prev_ptr
